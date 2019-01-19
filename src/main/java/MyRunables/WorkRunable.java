@@ -8,7 +8,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.http.DefaultFullHttpResponse;
 import io.netty.handler.codec.http.FullHttpResponse;
 import io.netty.handler.codec.http.HttpHeaderUtil;
-import pojo.Data;
+import pojo.D;
 import pojo.Message;
 import pojo.Status;
 
@@ -44,10 +44,10 @@ public class WorkRunable implements Runnable{
 
     @Override
     public void run() {
-        Data data = JSON.parseObject(message.getData(),Data.class);
+        D d = JSON.parseObject(message.getData(), D.class);
 
         try {
-        Status status = Myservlet.doServlet(data,message.getUri());
+        Status status = Myservlet.doServlet(d,message.getUri());
 
         String res = JSONObject.toJSONString(status);
             System.out.println(res);

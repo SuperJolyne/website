@@ -5,19 +5,19 @@ import java.util.List;
 
 public class Status {
     private String rs;
-    private Data d;
-    private List<Data> da;
+    private D d;
+    private List<D> dd;
 
-    public List<Data> getD() {
-        return da;
+    public List<D> getDd() {
+        return dd;
     }
 
-    public void newDa(){
-        da= new ArrayList<>();
+    public void newDd(){
+        dd = new ArrayList<>();
     }
 
-    public void setDa(Data s) {
-        da.add(s);
+    public void addDd(D s) {
+        dd.add(s);
     }
 
     public String getRs() {
@@ -28,11 +28,11 @@ public class Status {
         this.rs = rs;
     }
 
-    public Data getD() {
+    public D getD() {
         return d;
     }
 
-    public void setD(Data d) {
+    public void setD(D d) {
         this.d = d;
     }
 }

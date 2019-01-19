@@ -1,7 +1,5 @@
 package MyHandler;
 
-import MyRunables.MyThreadPool;
-import MyRunables.WorkRunable;
 import Myservlet.Myservlet;
 import com.alibaba.fastjson.JSON;
 import io.netty.buffer.ByteBuf;
@@ -9,7 +7,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.handler.codec.http.FullHttpRequest;
 import io.netty.handler.codec.http.HttpHeaders;
-import pojo.Data;
+import pojo.D;
 import pojo.Message;
 import pojo.Status;
 
@@ -31,9 +29,9 @@ public class InHandler extends ChannelInboundHandlerAdapter {
         String data=new String(result1,"utf8");
         System.out.println("----------------------------读取的数据："+data);
         message.setData(data);
-        Data data1 = JSON.parseObject(message.getData(),Data.class);
+        D d1 = JSON.parseObject(message.getData(), D.class);
         try {
-            Status status = Myservlet.doServlet(data1,message.getUri());
+            Status status = Myservlet.doServlet(d1,message.getUri());
             ctx.write(status);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();

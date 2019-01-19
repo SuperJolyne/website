@@ -1,19 +1,19 @@
 package contrual;
 
-import pojo.Data;
+import pojo.D;
 import pojo.Status;
 
 public class Order {
 
-    public static Status myself(Data data){
+    public static Status myself(D d){
         Status status = new Status();
         status.setRs("t");
-        Data d2 = new Data();
+        D d2 = new D();
         d2.setOid("xxx");
         d2.setAct("xxx");
         d2.setSta("xxx");
 
-        Data d4 = new Data();
+        D d4 = new D();
         d4.setGid("xxx");
         d4.setNam("xxxx");
         d4.setSiz("xxxx");
@@ -22,16 +22,16 @@ public class Order {
         d4.setPri("xxxx");
 
         d2.newD();
-        d2.setD(d4);
+        d2.setDa(d4);
 
         status.setD(d2);
         return status;
     }
 
-    public static Status detail(Data data){
+    public static Status detail(D d){
         Status status = new Status();
         status.setRs("t");
-        Data d2 = new Data();
+        D d2 = new D();
         d2.setPri("xx");
         d2.setDis("xxx");
         d2.setCou("xxx");
@@ -45,7 +45,7 @@ public class Order {
         return status;
     }
 
-    public static Status delete(Data data){
+    public static Status delete(D d){
         Status status = new Status();
         status.setRs("t");
         return status;

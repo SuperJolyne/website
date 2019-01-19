@@ -1,23 +1,23 @@
 package contrual;
 
-import pojo.Data;
+import pojo.D;
 import pojo.Status;
 
 public class Collection {
-    public static Status delete(Data data){
+    public static Status delete(D d){
         Status status=new Status();
-        if(data.getUid()!=null){
+        if(d.getUid()!=null){
             status.setRs("t");
         }
         return status;
     }
-    public static Status judge(Data data){
+    public static Status judge(D d){
         Status status=new Status();
-        if(data.getUid()!=null){
+        if(d.getUid()!=null){
             status.setRs("t");
-            Data data1=new Data();
-            data1.setIs("1");
-            status.setD(data1);
+            D d1 =new D();
+            d1.setIs("1");
+            status.setD(d1);
         }
         return status;
     }

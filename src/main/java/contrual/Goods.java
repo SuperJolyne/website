@@ -1,107 +1,107 @@
 package contrual;
 
-import pojo.Data;
+import pojo.D;
 import pojo.Status;
 
 public class Goods {
 
-    public static Status search(Data data){
+    public static Status search(D d){
         Status status = new Status();
         status.setRs("t");
-        Data d2 = new Data();
+        D d2 = new D();
         d2.setGid("xxx");
         d2.setNam("xxx");
         d2.setPri("xxx");
         d2.setDis("xxx");
         d2.setIm1("xxxxxxxxxxxxxx");
         d2.setIm2("xxxxxxxxxxxxxxxx");
-        Data d3 = new Data();
+        D d3 = new D();
         d3.setGid("xxxx");
         d3.setNam("xxx");
         d3.setPri("xxx");
         d3.setDis("xxx");
         d3.setIm1("xxxxxxxxxxxxxx");
         d3.setIm2("xxxxxxxxxxxxxxxx");
-        status.newDa();
-        status.setDa(d2);
-        status.setDa(d3);
+        status.newDd();
+        status.addDd(d2);
+        status.addDd(d3);
         return status;
     }
 
-    public static Status searchCtn(Data data){
+    public static Status searchCtn(D d){
         Status status = new Status();
         status.setRs("t");
-        Data d2 = new Data();
+        D d2 = new D();
         d2.setGid("xxx");
         d2.setNam("xxx");
         d2.setPri("xxx");
         d2.setDis("xxx");
         d2.setIm1("xxxxxxxxxxxxxx");
         d2.setIm2("xxxxxxxxxxxxxxxx");
-        Data d3 = new Data();
+        D d3 = new D();
         d3.setGid("xxxx");
         d3.setNam("xxx");
         d3.setPri("xxx");
         d3.setDis("xxx");
         d3.setIm1("xxxxxxxxxxxxxx");
         d3.setIm2("xxxxxxxxxxxxxxxx");
-        status.newDa();
-        status.setDa(d2);
-        status.setDa(d3);
+        status.newDd();
+        status.addDd(d2);
+        status.addDd(d3);
         return status;
     }
 
-    public static Status cart(Data data){
-        System.out.println(data.getUid());
+    public static Status cart(D d){
+        System.out.println(d.getUid());
         Status status = new Status();
-        if(data.getUid()!=null){
+        if(d.getUid()!=null){
             status.setRs("t");
         }else {
             status.setRs("f");
         }
         return status;
     }
-    public static Status collection(Data data){
-        System.out.println(data.getUid());
+    public static Status collection(D d){
+        System.out.println(d.getUid());
         Status status =new Status();
-        if(data.getUid()!=null&&data.getGid()!=null){
+        if(d.getUid()!=null&& d.getGid()!=null){
             status.setRs("t");
         }else {
             status.setRs("f");
         }
         return status;
     }
-    public static Status custom(Data data){
+    public static Status custom(D d){
         Status status=new Status();
-        if(data.getCtn()!=null){
+        if(d.getCtn()!=null){
             status.setRs("t");
-            status.newDa();
-            Data data1=new Data();
-            data1.setGid("x");
-            data1.setNam("xxx");
-            data1.setPri("xxx");
-            data1.setDis("xxx");
-            data1.setIm1("xx");
-            data1.setIm2("xx");
-            status.setDa(data1);
+            status.newDd();
+            D d1 =new D();
+            d1.setGid("x");
+            d1.setNam("xxx");
+            d1.setPri("xxx");
+            d1.setDis("xxx");
+            d1.setIm1("xx");
+            d1.setIm2("xx");
+            status.addDd(d1);
         }else {
             status.setRs("f");
         }
         return status;
     }
-    public static Status recomm(Data data){
+    public static Status recomm(D d){
         Status status=new Status();
-        if(data.getNam()!=null){
+        if(d.getNam()!=null){
             status.setRs("t");
-            status.newDa();
-            Data data1=new Data();
-            data1.setGid("xx");
-            data1.setNam("xxx");
-            data1.setPri("xxx");
-            data1.setDis("xxx");
-            data1.setIm1("xx");
-            data1.setIm2("xx");
-            status.setDa(data1);
+            status.newDd();
+            D d1 =new D();
+            d1.setGid("xx");
+            d1.setNam("xxx");
+            d1.setPri("xxx");
+            d1.setDis("xxx");
+            d1.setIm1("xx");
+            d1.setIm2("xx");
+            status.addDd(d1);
         }else {
             status.setRs("f");
         }

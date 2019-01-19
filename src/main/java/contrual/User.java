@@ -1,12 +1,12 @@
 package contrual;
 
-import pojo.Data;
+import pojo.D;
 import pojo.Status;
 
 public class User {
 
-    public static Status info(Data data){
-        Data d = new Data();
+    public static Status info(D da){
+        D d = new D();
         d.setNm("xxx");
         d.setPh("xxx");
         d.setBi("xxxx-xx");
@@ -16,90 +16,90 @@ public class User {
         return status;
     }
 
-    public static Status alterInfo(Data data){
+    public static Status alterInfo(D d){
         Status status = new Status();
         status.setRs("t");
         return status;
     }
 
-    public static Status address(Data data){
+    public static Status address(D d){
         Status status = new Status();
         status.setRs("t");
-        Data d2 = new Data();
+        D d2 = new D();
         d2.setAid("xxx");
         d2.setNm("xxxx");
         d2.setPh("xxx");
         d2.setZip("xxx");
         d2.setAd("xxxxxxxxxxxxxxx");
-        Data d3 = new Data();
+        D d3 = new D();
         d3.setAid("xxxx");
         d3.setNm("xxxx");
         d3.setPh("xxx");
         d3.setZip("xxx");
         d3.setAd("xxxxxxxxxxxxxxx");
-        status.newDa();
-        status.setDa(d2);
-        status.setDa(d3);
+        status.newDd();
+        status.addDd(d2);
+        status.addDd(d3);
         return status;
     }
 
-    public static Status addAdd(Data data){
+    public static Status addAdd(D d){
         Status status = new Status();
         status.setRs("t");
         return status;
     }
 
-    public static Status deleteAdd(Data data){
+    public static Status deleteAdd(D d){
         Status status = new Status();
         status.setRs("t");
         return status;
     }
 
-    public static Status collection(Data data){
+    public static Status collection(D d){
         Status status=new Status();
-        if(data.getUid()!=null){
+        if(d.getUid()!=null){
             status.setRs("t");
-            Data data1=new Data();
-            data1.setGid("123");
-            data1.setNam("1");
-            data1.setPri("2");
-            data1.setDis("3");
-            data1.setIm("4");
-            status.newDa();
-            status.setDa(data1);
+            D d1 =new D();
+            d1.setGid("123");
+            d1.setNam("1");
+            d1.setPri("2");
+            d1.setDis("3");
+            d1.setIm("4");
+            status.newDd();
+            status.addDd(d1);
         }else {
             status.setRs("f");
         }
         return status;
     }
-    public static Status uncom(Data data){
+    public static Status uncom(D d){
         Status status=new Status();
         status.setRs("t");
-        status.newDa();
-        Data data1=new Data();
-        data1.setOid("xxx");
-        data1.setNam("xxx");
-        data1.setAct("xxx");
-        data1.setCol("xx");
-        data1.setSiz("xx");
-        data1.setIm("xxx");
-        data1.setQua("xxx");
-        status.setDa(data1);
+        status.newDd();
+        D d1 =new D();
+        d1.setOid("xxx");
+        d1.setNam("xxx");
+        d1.setAct("xxx");
+        d1.setCol("xx");
+        d1.setSiz("xx");
+        d1.setIm("xxx");
+        d1.setQua("xxx");
+        status.addDd(d1);
         return status;
     }
-    public static Status com(Data data){
-        Status status=new Status();
-        status.setRs("t");
-        return status;
-    }
-    public static Status confirm(Data data){
+    public static Status com(D d){
         Status status=new Status();
         status.setRs("t");
         return status;
     }
-    public static Status delectCom(Data data){
+    public static Status confirm(D d){
+        Status status=new Status();
+        status.setRs("t");
+        return status;
+    }
+    public static Status delectCom(D d){
         Status status = new Status();
-        if (data.getUid()!=null){
+        if (d.getUid()!=null){
             status.setRs("t");
         }else {
             status.setRs("f");

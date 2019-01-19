@@ -3,8 +3,7 @@ package pojo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Data {
-    private String aaaa;
+public class D {
 
     private String ph;
 
@@ -116,32 +115,38 @@ public class Data {
 
     private String im2;
 
-    private List<Data> d;
+    private String one;
 
-    public List<Data> getD() {
-        return d;
+    private String two;
+
+    private String did;
+
+    private String thr;
+
+    private String ml;
+
+    private String uuid;
+
+    private String ti;
+
+    private String expn;
+
+    private String exp;
+
+    private String cod;
+
+    private List<D> da;
+
+    public List<D> getDa() {
+        return da;
     }
 
     public void newD(){
-        d= new ArrayList<>();
+        da = new ArrayList<>();
     }
 
-    public void setD(Data s) {
-        d.add(s);
-    }
-
-    private List<String> list;
-
-    public List<String> getList() {
-        return list;
-    }
-
-    public void newList(){
-        list= new ArrayList<>();
-    }
-
-    public void setList(String s) {
-        list.add(s);
+    public void setDa(D s) {
+        da.add(s);
     }
 
     public String getPh() {
@@ -582,5 +587,85 @@ public class Data {
 
     public void setIm2(String im2) {
         this.im2 = im2;
+    }
+
+    public String getOne() {
+        return one;
+    }
+
+    public void setOne(String one) {
+        this.one = one;
+    }
+
+    public String getTwo() {
+        return two;
+    }
+
+    public void setTwo(String two) {
+        this.two = two;
+    }
+
+    public String getDid() {
+        return did;
+    }
+
+    public void setDid(String did) {
+        this.did = did;
+    }
+
+    public String getThr() {
+        return thr;
+    }
+
+    public void setThr(String thr) {
+        this.thr = thr;
+    }
+
+    public String getMl() {
+        return ml;
+    }
+
+    public void setMl(String ml) {
+        this.ml = ml;
+    }
+
+    public String getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
+    }
+
+    public String getTi() {
+        return ti;
+    }
+
+    public void setTi(String ti) {
+        this.ti = ti;
+    }
+
+    public String getExpn() {
+        return expn;
+    }
+
+    public void setExpn(String expn) {
+        this.expn = expn;
+    }
+
+    public String getExp() {
+        return exp;
+    }
+
+    public void setExp(String exp) {
+        this.exp = exp;
+    }
+
+    public String getCod() {
+        return cod;
+    }
+
+    public void setCod(String cod) {
+        this.cod = cod;
     }
 }
