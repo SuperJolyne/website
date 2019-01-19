@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Data {
+    private String aaaa;
+
     private String ph;
 
     private String nm;
