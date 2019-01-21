@@ -1,0 +1,1 @@
+load data local infile '/home/super/Business/business.csv' into table goods character set utf8 Fields Terminated By ',' Enclosed By '"' Escaped By '"' Lines Terminated By '\r' ignore 1 lines(gid,one,two,three,brand,title,description,discount,price,pro_code,color,size,im);
