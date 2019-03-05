@@ -12,7 +12,7 @@ public class Myservlet {
     public static Status doServlet(D d, String url) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
         Status status = new Status();
         String[] urls = url.split("[/]");
-        System.out.println(urls[1]);
+        System.out.println("url:"+urls[1]+" "+urls[2]);
         Class cls = null;
         Constructor constructor = null;
         switch (urls[1]){
