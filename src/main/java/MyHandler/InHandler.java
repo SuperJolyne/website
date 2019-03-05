@@ -28,27 +28,33 @@ public class InHandler extends ChannelInboundHandlerAdapter {
         buf.readBytes(result1);
         String data=new String(result1,"utf8");
         System.out.println("----------------------------读取的数据："+data);
-        message.setData(data);
-        D d1 = JSON.parseObject(message.getData(), D.class);
+//        message.setData(data);
+        Status status = new Status();
         try {
-            Status status = Myservlet.doServlet(d1,message.getUri());
+            D d1 = JSON.parseObject(data, D.class);
+            status = Myservlet.doServlet(d1,message.getUri());
             ctx.write(status);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
+            status.setRs("f");
+            ctx.write(status);
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
+            status.setRs("f");
+            ctx.write(status);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
+            status.setRs("f");
+            ctx.write(status);
         } catch (InvocationTargetException e) {
             e.printStackTrace();
+            status.setRs("f");
+            ctx.write(status);
         } catch (InstantiationException e) {
             e.printStackTrace();
+            status.setRs("f");
+            ctx.write(status);
         }
-
-//        WorkRunable work = new WorkRunable();
-//        work.setMessage(message);
-//        work.setCtx(ctx);
-//        MyThreadPool.doWork(work);
 
     }
 }
