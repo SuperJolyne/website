@@ -135,6 +135,50 @@ public class D {
 
     private String cod;
 
+    public String getCid() {
+        return cid;
+    }
+
+    public void setCid(String cid) {
+        this.cid = cid;
+    }
+
+    private String cid;
+
+    public String getJ() {
+        return j;
+    }
+
+    public void setJ(String j) {
+        this.j = j;
+    }
+
+    private String j;
+
+    public String getMon() {
+        return mon;
+    }
+
+    public void setMon(String mon) {
+        this.mon = mon;
+    }
+
+    private String mon;
+
+    public String getPhs() {
+        return phs;
+    }
+
+    public void setPhs(String phs) {
+        this.phs = phs;
+    }
+
+    private String phs;
+
+    public void setDa(List<D> da) {
+        this.da = da;
+    }
+
     private List<D> da;
 
     public List<D> getDa() {
@@ -145,7 +189,7 @@ public class D {
         da = new ArrayList<>();
     }
 
-    public void setDa(D s) {
+    public void addDa(D s) {
         da.add(s);
     }
 
